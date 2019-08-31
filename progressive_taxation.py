@@ -1,5 +1,7 @@
 from math import floor
 
+#challenge from https://www.reddit.com/r/dailyprogrammer/comments/cdieag/20190715_challenge_379_easy_progressive_taxation/
+
 TAXATION_RULE = [(0, 0), (10000, 0.1), (30000, 0.25), (100000, 0.4)]
 
 
