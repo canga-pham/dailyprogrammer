@@ -10,6 +10,6 @@ def taxation(income, taxation_rule):
         if income > tax_class:
             income_tax = income - tax_class
             tax_amount += income_tax*tax
-            income -= tax_class
+            income = tax_class
     return floor(tax_amount)
 
