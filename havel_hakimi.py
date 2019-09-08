@@ -1,6 +1,30 @@
 # source https://www.reddit.com/r/dailyprogrammer/comments/bqy1cf/20190520_challenge_378_easy_the_havelhakimi/
 
-ACQUAINTANCE_LIST = [5, 3, 0, 2, 6, 2, 0, 7, 2, 5]
+
+def integer_list(list):
+    """
+    The function returns an error if elements of the list are not integers
+    :param list: list which is supposed to have  integer elements only
+    :return: error if any element is not an positive integer or zero
+    """
+
+    # raises an error if list contains a negative number
+    for i in list:
+        if not float(i).is_integer():
+            raise ValueError("List {list} can contain only integers!".format(list=list))
+
+
+def non_negative_list(list):
+    """
+    The function returns an error if elements of the list are negative
+    :param list: list which is supposed to have negative elements only
+    :return: error if element is not an positive number or zero
+    """
+
+    # raises an error if list contains a negative number
+    for i in list:
+        if i < 0:
+            raise ValueError("List {list} can contain only non negative numbers!".format(list=list))
 
 
 def havel_hakimi(list):
@@ -29,12 +53,11 @@ def havel_hakimi(list):
     :return: True, if List is according to havel-hakimi algorithm
             False, if it's not
     """
-    while True:
-        print(list)
+    integer_list(list)
+    non_negative_list(list)
 
+    while True:
         # 1. removing zeros
-        if list.count(0) == len(list):
-            return True
         for i in range(list.count(0)):
             list.remove(0)
 
