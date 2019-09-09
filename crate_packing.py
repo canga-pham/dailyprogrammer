@@ -1,11 +1,5 @@
 # source https://www.reddit.com/r/dailyprogrammer/comments/bazy5j/20190408_challenge_377_easy_axisaligned_crate/
 
-BOX_WIDTH = 4
-BOX_LENGTH = 11
-
-ROOM_WIDTH = 61
-ROOM_LENGTH = 145
-
 
 def max_box_count(room_width, room_length, box_width, box_length, rotate = False):
     """
@@ -45,7 +39,5 @@ def n_max_box_count(room_size, box_size):
     box_count = 1
     for axis in count_axis:
         box_count = box_count * axis
-    print(room_size)
-    print(box_size)
-    print(count_axis)
+        
     return box_count
