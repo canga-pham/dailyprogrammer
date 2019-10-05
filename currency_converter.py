@@ -1,7 +1,7 @@
 import requests
 
 
-def currency_converter(from_currency, amount, to_currency = "EUR"):
+def currency_converter(from_currency, amount, to_currency="EUR"):
     """
     converts chosen amount from one currency to another
     :param from_currency: convert from this currency, format: abbreviation of the currency, e.g. 'EUR'
